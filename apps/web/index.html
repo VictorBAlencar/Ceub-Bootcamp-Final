@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leitor Zen PWA</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+  <div id="app">
+    <h1>🧘 Leitor Zen PWA</h1>
+    <p>Cole a URL de um artigo para uma leitura focada.</p>
+    <div class="form-container">
+      <input type="url" id="url-input" placeholder="https://exemplo.com/artigo" />
+      <button id="parse-button">Ler Zen</button>
+    </div>
+    <div id="loading-spinner" class="hidden"></div>
+    <article id="zen-content-container"></article>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

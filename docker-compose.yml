@@ -1,0 +1,14 @@
+services:
+  api:
+    build: ./apps/api
+    ports: ["3000:3000"]
+    container_name: bootcamp-api
+  web:
+    build: ./apps/web
+    ports: ["8080:80"]
+    environment:
+      # Aqui está a mágica: o PWA (web) saberá
+      # onde encontrar a API dentro da rede Docker.
+      - VITE_API_URL=http://api:3000 
+    depends_on: [api]
+    container_name: bootcamp-webs
